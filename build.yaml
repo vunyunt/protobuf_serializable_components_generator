@@ -1,0 +1,9 @@
+builders:
+  protobuf_serializable_components:
+    import: "package:protobuf_serializable_components_generator/protobuf_serializable_components_generator.dart"
+    builder_factories: ["coreSerializableComponentsBuilder"]
+    build_extensions:
+      r"$lib$":
+        - "components/serializable/register_serializable_components.g.dart"
+    auto_apply: dependents
+    build_to: source

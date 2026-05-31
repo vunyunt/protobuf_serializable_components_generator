@@ -1,0 +1,17 @@
+name: protobuf_serializable_components_generator
+description: Standalone code generator for protobuf_serializable_components.
+version: 1.0.0
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  analyzer: ^10.0.1
+  build: ^4.0.4
+  glob: ^2.1.3
+  source_gen: ^4.2.0
+  protobuf_serializable_components:
+    path: ../protobuf_serializable_components
+
+dev_dependencies:
+  lints: ^6.0.0
