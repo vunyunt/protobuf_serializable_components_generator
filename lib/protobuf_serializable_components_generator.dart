@@ -4,4 +4,4 @@ import 'package:build/build.dart';
 import 'src/core_component_generator.dart';
 
 Builder coreSerializableComponentsBuilder(BuilderOptions options) =>
-    CoreSerializableComponentsBuilder();
+    CoreSerializableComponentsBuilder(options);
