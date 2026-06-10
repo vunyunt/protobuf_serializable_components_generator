@@ -7,3 +7,31 @@ builders:
         - "components/serializable/register_serializable_components.g.dart"
     auto_apply: dependents
     build_to: source
+
+  descriptor_registry:
+    import: "package:protobuf_serializable_components_generator/protobuf_serializable_components_generator.dart"
+    builder_factories: ["descriptorRegistryBuilder"]
+    build_extensions:
+      r"$lib$":
+        - "src/descriptor_registry.g.dart"
+    auto_apply: dependents
+    build_to: source
+
+  type_registry:
+    import: "package:protobuf_serializable_components_generator/protobuf_serializable_components_generator.dart"
+    builder_factories: ["typeRegistryBuilder"]
+    build_extensions:
+      r"$lib$":
+        - "protobuf_type_registry.g.dart"
+    auto_apply: dependents
+    build_to: source
+
+  export_index:
+    import: "package:protobuf_serializable_components_generator/protobuf_serializable_components_generator.dart"
+    builder_factories: ["exportIndexBuilder"]
+    build_extensions:
+      r"$lib$":
+        - "protobuf_exports.g.dart"
+        - "protobuf_pbjson_exports.g.dart"
+    auto_apply: dependents
+    build_to: source
